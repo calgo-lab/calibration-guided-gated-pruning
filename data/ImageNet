@@ -1,0 +1,10 @@
+# ImageNet Preparation
+
+This folder contains helper scripts and metadata for preparing the ImageNet dataset.
+
+## Contents
+- `download_imagenet.sh`: example script for downloading ImageNet (requires access credentials if applicable)
+- `prepare_imagenet.py`: dataset preparation / validation set organization
+- `imagenet_class_index.json`: class index mapping used for label decoding
+
+Please update dataset paths in the corresponding notebooks before running experiments.
