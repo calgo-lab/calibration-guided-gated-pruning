@@ -34,4 +34,4 @@ This repository supports experiments on:
 
 Please update the dataset paths inside the corresponding notebooks before running experiments.
 
-For ImageNet, dataset download and preparation utilities are provided under `data/imagenet/`.
+For ImageNet, dataset download and preparation utilities are provided under `data`.
