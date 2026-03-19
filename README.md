@@ -24,3 +24,14 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 ```
 
 > **Note:** If installing inside a notebook, restart the kernel after installation.
+
+## Data
+
+This repository supports experiments on:
+- CIFAR-10
+- CIFAR-100
+- ImageNet
+
+Please update the dataset paths inside the corresponding notebooks before running experiments.
+
+For ImageNet, dataset download and preparation utilities are provided under `data/imagenet/`.
