@@ -35,9 +35,9 @@ This repository supports experiments on:
 
 ## Running Experiments
 
-The experiments are organized as notebook-based pipelines, with one notebook per dataset and method.
+The experiments are organized as notebook-based pipelines. Each notebook contains the end-to-end workflow for model setup, training, pruning, fine-tuning, and evaluation.
 
-### Main method
+### Main Method
 
 #### WRN-28-10 on CIFAR-10
 Run:
@@ -51,7 +51,7 @@ Run:
 Run:
 - `notebooks/resnet50_imagenet.ipynb`
 
-### Gate Decorator (GD) baseline
+### Gate Decorator (GD) Baseline
 
 #### WRN-28-10 on CIFAR-10
 Run:
@@ -65,7 +65,25 @@ Run:
 Run:
 - `notebooks/resnet50_imagenet_gd.ipynb`
 
+### Hyperparameter Sweep for Calibration Weight
+
+To study the effect of the calibration regularization strength, we additionally provide HPO notebooks for sweeping the calibration weight $\beta$ in the joint objective.
+
+#### WRN-28-10 on CIFAR-10
+Run:
+- `notebooks/hpo_beta_wrn28_10_cifar10.ipynb`
+
+#### WRN-28-10 on CIFAR-100
+Run:
+- `notebooks/hpo_beta_wrn28_10_cifar100.ipynb`
+
+#### ResNet-50 on ImageNet
+Run:
+- `notebooks/hpo_beta_resnet50_imagenet.ipynb`
+
 ### Notes
+
 - Please update dataset paths before running the notebooks.
 - For ImageNet experiments, ensure the dataset is prepared using the utilities provided under `data/`.
-- The notebooks contain the end-to-end pipeline for model setup, pruning, fine-tuning, and evaluation.
+- The HPO notebooks are used to select the calibration weight $\beta$ before running the final main-method experiments.
+- The GD baseline corresponds to gated structured pruning without the calibration-aware objective.
