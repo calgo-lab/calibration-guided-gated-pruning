@@ -1,0 +1,11 @@
+# ImageNet Preparation
+
+This folder contains helper scripts and metadata for preparing the ImageNet dataset.
+
+For ImageNet experiments, the following helper files are provided in this folder:
+
+- `Imagenet_Data_Download.ipynb` — notebook for downloading and/or preparing the ImageNet dataset
+- `imagenet_class_index.json` — class index mapping used for label decoding
+
+
+Please make sure the ImageNet dataset is placed under the correct path and update the corresponding notebook paths before running the ImageNet experiments.
